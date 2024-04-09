@@ -54,7 +54,7 @@ router.post("/loginuser",[
     try{
         // console.log(req.body);
       let userData = await userModel.findOne({email: req.body.email});
-      console.log(userData);
+    //   console.log(userData);
       if(!userData){
         return res.status(400).json({errors: "Invalid Credentials"});
       }

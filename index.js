@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoute = require('./routes/createUser');
 const display = require('./routes/displayData');
+const orderRoute = require('./routes/orderData');
 
 // mongodb+srv://rupeshmandalrk115:rpachapach@cluster0.unyo99z.mongodb.net/zomato
 
@@ -69,6 +70,7 @@ app.use(express.json());
 
 app.use("/api",userRoute);
 app.use("/api",display);
+app.use("/api",orderRoute);
 
 
 // app.get('/',(req,res)=>{
